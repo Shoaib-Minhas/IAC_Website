@@ -1,0 +1,15 @@
+# Use a base image
+FROM ubuntu:latest
+
+# Install necessary packages
+RUN apt update && apt install -y nginx git
+
+# Clone the Git repository
+ADD https://github.com/Shoaib-Minhas/IAC_Website.git /opt/app
+
+RUN cp /opt/app/index.html /var/www/html
+# Copy a local file into the image
+COPY ./iac-textfile /home/shoaib
+
+# Run nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
