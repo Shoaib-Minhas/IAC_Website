@@ -1,4 +1,4 @@
-version: '3'
+
 services:
   frontend:
     build:
@@ -7,10 +7,7 @@ services:
     image: iac-demo
     ports:
       - "8046:80"
+      - "8067:80"  
     hostname: My-file
     container_name: frontend-container
-  backend:
-    image: nginx
-    ports:
-      - "8067:80"
 
