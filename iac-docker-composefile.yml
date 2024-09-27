@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: iac_dockerfile
+      no-cache: true
     image: iac-demo
     ports:
       - "8046:80"
