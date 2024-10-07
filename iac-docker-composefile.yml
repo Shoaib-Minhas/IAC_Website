@@ -7,8 +7,8 @@ services:
       no_cache: true
     image: iac-demo
     ports:
-      - "8046:80"
-      - "8067:80"  
+      - "5000:80"
+      - "5001:80"  
     hostname: My-file
     container_name: frontend-container
 
